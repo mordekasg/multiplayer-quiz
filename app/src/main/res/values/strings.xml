@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">PUM Project - Open Trivia Quiz App</string>
+    <string name="current_answers_d">Current answers: %d</string>
+    <string name="wrong_answers_d">Wrong answers: %d</string>
+    <string name="percentage_2f">Percentage: %.2f%%</string>
+</resources>

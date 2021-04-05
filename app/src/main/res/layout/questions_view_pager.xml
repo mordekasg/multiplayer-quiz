@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.QuestionsActivity">
+
+        <TextView
+            android:id="@+id/tvQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:text="Question text"
+            />
+        
+        <RadioGroup
+            android:id="@+id/rgAnswers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvQuestion">
+            <RadioButton
+                android:id="@+id/rbAnswer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <RadioButton
+                android:id="@+id/rbAnswer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <RadioButton
+                android:id="@+id/rbAnswer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <RadioButton
+                android:id="@+id/rbAnswer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </RadioGroup>
+    </RelativeLayout>
+</ScrollView>
