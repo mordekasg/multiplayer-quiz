@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.NumberPicker;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -26,12 +27,54 @@ import pl.edu.uwr.pum.pamproject.viewmodel.CategoryViewModel;
 public class MainActivity extends AppCompatActivity {
     private CategoryViewModel viewModel;
     private QuestionsSingle qs;
+    private androidx.constraintlayout.widget.ConstraintLayout clGameModeSelect, clCategorySelect, clMultiplayer;
+    private static String gameMode = "single";
+    private static String username = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         qs = QuestionsSingle.get(this);
+
+        EditText etUsername = findViewById(R.id.etUsername);
+
+        clGameModeSelect = findViewById(R.id.clGameModeSelect);
+        clCategorySelect = findViewById(R.id.clCategorySelect);
+        clMultiplayer = findViewById(R.id.clMultiplayer);
+
+        Button btnSingle = findViewById(R.id.btnSingle);
+        Button btnMulti = findViewById(R.id.btnMulti);
+        Button btnMultiStart = findViewById(R.id.btnMultiStart);
+
+        btnSingle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clGameModeSelect.setVisibility(View.INVISIBLE);
+                clCategorySelect.setVisibility(View.VISIBLE);
+                clMultiplayer.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        btnMulti.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MainActivity.gameMode = "multi";
+                clGameModeSelect.setVisibility(View.INVISIBLE);
+                clCategorySelect.setVisibility(View.INVISIBLE);
+                clMultiplayer.setVisibility(View.VISIBLE);
+            }
+        });
+
+        btnMultiStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clGameModeSelect.setVisibility(View.INVISIBLE);
+                clCategorySelect.setVisibility(View.VISIBLE);
+                clMultiplayer.setVisibility(View.INVISIBLE);
+                username = etUsername.getText().toString();
+            }
+        });
 
         Spinner spinnerCategory = findViewById(R.id.spinnerCategories);
         spinnerCategory.setEnabled(false);
