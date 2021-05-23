@@ -11,9 +11,11 @@ public class QuestionsSingle {
     private List<Question> questions;
     public int correct = 0;
     public int wrong = 0;
+    public List<Boolean> answers;
 
     private QuestionsSingle(Context context){
         questions = new ArrayList<>();
+        answers = new ArrayList<>();
     }
 
     public static QuestionsSingle get(Context context) {
@@ -47,5 +49,6 @@ public class QuestionsSingle {
         questions = new ArrayList<>();
         correct = 0;
         wrong = 0;
+        answers = new ArrayList<>();
     }
 }

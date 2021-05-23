@@ -9,6 +9,8 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import org.json.JSONObject;
+
 import pl.edu.uwr.pum.pamproject.R;
 import pl.edu.uwr.pum.pamproject.model.Question;
 import pl.edu.uwr.pum.pamproject.model.QuestionsSingle;
@@ -35,17 +37,27 @@ public class QuestionsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 for (Question question : qs.getQuestions()) {
-                    if (question.correct_answer == question.selectedAnswer)
+                    if (question.correct_answer == question.selectedAnswer) {
                         qs.correct++;
-                    else
+                        qs.answers.add(Boolean.TRUE);
+                    }
+                    else {
                         qs.wrong++;
+                        qs.answers.add(Boolean.FALSE);
+                    }
                 }
 
-                // New activity
-                Intent intent = new Intent(getApplicationContext(), ResultsActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                getApplicationContext().startActivity(intent);
-                finish();
+                if (MainActivity.multiMode) {
+                    MainActivity.wsClient.send("{\"type\":\"answers\",\"data\":" + qs.answers.toString() + "}");
+                    finish();
+                }
+                else {
+                    // New activity
+                    Intent intent = new Intent(getApplicationContext(), ResultsActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    getApplicationContext().startActivity(intent);
+                    finish();
+                }
             }
         });
     }
