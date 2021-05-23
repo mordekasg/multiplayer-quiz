@@ -1,10 +1,9 @@
-package pl.edu.uwr.pum.pumproject2.model;
+package pl.edu.uwr.pum.pamproject.model;
 
 import android.content.Context;
 import android.text.Html;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class QuestionsSingle {
@@ -29,7 +28,7 @@ public class QuestionsSingle {
         return questions;
     }
 
-    public void setCrimes(List<Question> questions) {
+    public void setQuestions(List<Question> questions) {
         this.questions = questions;
 
         for (Question question : questions) {

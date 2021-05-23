@@ -1,4 +1,4 @@
-package pl.edu.uwr.pum.pumproject2.repository;
+package pl.edu.uwr.pum.pamproject.repository;
 
 import android.app.Application;
 
@@ -6,9 +6,9 @@ import androidx.lifecycle.LiveData;
 
 import java.util.List;
 
-import pl.edu.uwr.pum.pumproject2.database.CategoryRoom;
-import pl.edu.uwr.pum.pumproject2.model.CategoryDAO;
-import pl.edu.uwr.pum.pumproject2.model.CategoryEntity;
+import pl.edu.uwr.pum.pamproject.database.CategoryRoom;
+import pl.edu.uwr.pum.pamproject.model.CategoryDAO;
+import pl.edu.uwr.pum.pamproject.model.CategoryEntity;
 
 public class CategoryRepository {
     private CategoryDAO mCategoryDAO;

@@ -1,4 +1,4 @@
-package pl.edu.uwr.pum.pumproject2.model;
+package pl.edu.uwr.pum.pamproject.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

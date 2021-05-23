@@ -1,19 +1,17 @@
-package pl.edu.uwr.pum.pumproject2.view;
+package pl.edu.uwr.pum.pamproject.view;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import pl.edu.uwr.pum.pumproject2.R;
-import pl.edu.uwr.pum.pumproject2.model.Question;
-import pl.edu.uwr.pum.pumproject2.model.QuestionsSingle;
+import pl.edu.uwr.pum.pamproject.R;
+import pl.edu.uwr.pum.pamproject.model.Question;
+import pl.edu.uwr.pum.pamproject.model.QuestionsSingle;
 
 public class QuestionsActivity extends AppCompatActivity {
     private QuestionsSingle qs;

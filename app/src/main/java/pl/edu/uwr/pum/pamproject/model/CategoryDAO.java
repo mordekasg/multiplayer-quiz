@@ -1,4 +1,4 @@
-package pl.edu.uwr.pum.pumproject2.model;
+package pl.edu.uwr.pum.pamproject.model;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;

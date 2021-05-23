@@ -1,6 +1,4 @@
-package pl.edu.uwr.pum.pumproject2.model;
-
-import java.util.List;
+package pl.edu.uwr.pum.pamproject.model;
 
 import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory;
 import io.reactivex.rxjava3.core.Single;

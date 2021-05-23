@@ -1,11 +1,9 @@
-package pl.edu.uwr.pum.pumproject2.view;
+package pl.edu.uwr.pum.pamproject.view;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -13,15 +11,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import pl.edu.uwr.pum.pumproject2.R;
-import pl.edu.uwr.pum.pumproject2.model.Question;
-import pl.edu.uwr.pum.pumproject2.model.QuestionsSingle;
+import pl.edu.uwr.pum.pamproject.R;
+import pl.edu.uwr.pum.pamproject.model.Question;
+import pl.edu.uwr.pum.pamproject.model.QuestionsSingle;
 
 public class QuestionsPagerAdapter extends RecyclerView.Adapter<QuestionsPagerAdapter.ViewHolder> {
     private Context context;

@@ -1,7 +1,6 @@
-package pl.edu.uwr.pum.pumproject2.database;
+package pl.edu.uwr.pum.pamproject.database;
 
 import android.content.Context;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.room.Database;
@@ -9,18 +8,17 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
-import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.observers.DisposableSingleObserver;
 import io.reactivex.rxjava3.schedulers.Schedulers;
-import pl.edu.uwr.pum.pumproject2.model.Category;
-import pl.edu.uwr.pum.pumproject2.model.CategoryDAO;
-import pl.edu.uwr.pum.pumproject2.model.CategoryEntity;
-import pl.edu.uwr.pum.pumproject2.model.TriviaCategory;
-import pl.edu.uwr.pum.pumproject2.model.TriviaService;
+import pl.edu.uwr.pum.pamproject.model.Category;
+import pl.edu.uwr.pum.pamproject.model.CategoryDAO;
+import pl.edu.uwr.pum.pamproject.model.CategoryEntity;
+import pl.edu.uwr.pum.pamproject.model.TriviaCategory;
+import pl.edu.uwr.pum.pamproject.model.TriviaService;
 
 @Database(entities = {CategoryEntity.class}, version = 1, exportSchema = false)
 public abstract class CategoryRoom extends RoomDatabase {

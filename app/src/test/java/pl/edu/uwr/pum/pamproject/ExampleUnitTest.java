@@ -1,4 +1,4 @@
-package pl.edu.uwr.pum.pumproject2;
+package pl.edu.uwr.pum.pamproject;
 
 import org.junit.Test;
 

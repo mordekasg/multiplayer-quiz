@@ -1,4 +1,4 @@
-package pl.edu.uwr.pum.pumproject2.model;
+package pl.edu.uwr.pum.pamproject.model;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;

@@ -1,6 +1,4 @@
-package pl.edu.uwr.pum.pumproject2.model;
-
-import java.util.List;
+package pl.edu.uwr.pum.pamproject.model;
 
 import io.reactivex.rxjava3.core.Single;
 import retrofit2.http.GET;

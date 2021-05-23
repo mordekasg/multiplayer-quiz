@@ -1,6 +1,5 @@
-package pl.edu.uwr.pum.pumproject2.view;
+package pl.edu.uwr.pum.pamproject.view;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,13 +16,12 @@ import androidx.lifecycle.ViewModelProvider;
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.observers.DisposableSingleObserver;
 import io.reactivex.rxjava3.schedulers.Schedulers;
-import pl.edu.uwr.pum.pumproject2.R;
-import pl.edu.uwr.pum.pumproject2.model.CategoryEntity;
-import pl.edu.uwr.pum.pumproject2.model.Question;
-import pl.edu.uwr.pum.pumproject2.model.QuestionsSingle;
-import pl.edu.uwr.pum.pumproject2.model.TriviaQuestions;
-import pl.edu.uwr.pum.pumproject2.model.TriviaService;
-import pl.edu.uwr.pum.pumproject2.viewmodel.CategoryViewModel;
+import pl.edu.uwr.pum.pamproject.R;
+import pl.edu.uwr.pum.pamproject.model.CategoryEntity;
+import pl.edu.uwr.pum.pamproject.model.QuestionsSingle;
+import pl.edu.uwr.pum.pamproject.model.TriviaQuestions;
+import pl.edu.uwr.pum.pamproject.model.TriviaService;
+import pl.edu.uwr.pum.pamproject.viewmodel.CategoryViewModel;
 
 public class MainActivity extends AppCompatActivity {
     private CategoryViewModel viewModel;
@@ -46,11 +44,6 @@ public class MainActivity extends AppCompatActivity {
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*
-                TODO
-                 */
-                // Download questions
-
                 btnStart.setEnabled(false);
                 CategoryEntity category = (CategoryEntity)spinnerCategory.getSelectedItem();
 
@@ -61,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onSuccess(@io.reactivex.rxjava3.annotations.NonNull TriviaQuestions values) {
                             if (values != null) {
-                                qs.setCrimes(values.getTriviaQuestions());
+                                qs.setQuestions(values.getTriviaQuestions());
 
                                 // New activity
                                 Intent intent = new Intent(getApplicationContext(), QuestionsActivity.class);

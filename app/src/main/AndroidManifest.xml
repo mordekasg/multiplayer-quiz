@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="pl.edu.uwr.pum.pumproject2">
+    package="pl.edu.uwr.pum.pamproject">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -11,14 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MVVMLocalRoomJava">
-        <activity android:name="pl.edu.uwr.pum.pumproject2.view.MainActivity">
+        <activity android:name="pl.edu.uwr.pum.pamproject.view.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.QuestionsActivity" android:parentActivityName=".view.MainActivity"></activity>
-        <activity android:name=".view.ResultsActivity" android:parentActivityName=".view.MainActivity"></activity>
+        <activity android:name="pl.edu.uwr.pum.pamproject.view.QuestionsActivity" android:parentActivityName="pl.edu.uwr.pum.pamproject.view.MainActivity"></activity>
+        <activity android:name="pl.edu.uwr.pum.pamproject.view.ResultsActivity" android:parentActivityName="pl.edu.uwr.pum.pamproject.view.MainActivity"></activity>
     </application>
 </manifest>

@@ -1,4 +1,4 @@
-package pl.edu.uwr.pum.pumproject2.view;
+package pl.edu.uwr.pum.pamproject.view;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
-import pl.edu.uwr.pum.pumproject2.R;
-import pl.edu.uwr.pum.pumproject2.model.CategoryEntity;
+import pl.edu.uwr.pum.pamproject.R;
+import pl.edu.uwr.pum.pamproject.model.CategoryEntity;
 
 public class CategoryRecyclerViewAdapter extends ListAdapter <CategoryEntity, CategoryRecyclerViewAdapter.CategoryViewHolder> {
     protected CategoryRecyclerViewAdapter(@NonNull DiffUtil.ItemCallback<CategoryEntity> diffCallback) {

@@ -1,4 +1,4 @@
-package pl.edu.uwr.pum.pumproject2.viewmodel;
+package pl.edu.uwr.pum.pamproject.viewmodel;
 
 import android.app.Application;
 
@@ -8,9 +8,8 @@ import androidx.lifecycle.LiveData;
 
 import java.util.List;
 
-import pl.edu.uwr.pum.pumproject2.model.Category;
-import pl.edu.uwr.pum.pumproject2.model.CategoryEntity;
-import pl.edu.uwr.pum.pumproject2.repository.CategoryRepository;
+import pl.edu.uwr.pum.pamproject.model.CategoryEntity;
+import pl.edu.uwr.pum.pamproject.repository.CategoryRepository;
 
 public class CategoryViewModel extends AndroidViewModel {
     private final CategoryRepository mRepository;
